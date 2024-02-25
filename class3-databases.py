@@ -15,11 +15,11 @@ def create_con(hostname, username, userpw, dbname):
         print(f'The error {e} occured')
     return connection
 
-conn = create_con('cis3368spring', 'admin', 'SpringTW24', 'cis3368spring24db')
+conn = create_con('', '', '', '')
 cursor = conn.cursor(dictionary = True)
-sql = 'SELECT * FROM Drinks'
+sql = 'SELECT * FROM users'
 cursor.execute(sql)
 rows = cursor.fetchall()
 for user in rows:
     print(user)
-    #print('first name is: ' + user[''])
+    print('first name is: ' + user['firstname'])
